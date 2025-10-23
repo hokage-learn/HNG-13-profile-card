@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <article class="profile-card" data-testid="test-profile-card">
+    
+    <!-- Avatar Section -->
+    <figure class="profile-avatar">
+      <img 
+        src="assets/about.jpeg" 
+        alt="Photo of Alex Johnson" 
+        data-testid="test-user-avatar"
+      />
+    </figure>
+
+    <!-- Main Content -->
+    <div class="profile-content">
+      <header>
+        <h2 data-testid="test-user-name">Alex Johnson</h2>
+      </header>
+
+      <p data-testid="test-user-bio">
+        Passionate front-end developer who loves creating accessible, responsive user experiences.
+      </p>
+
+      <!-- Time Section -->
+      <p class="profile-time">
+        Current time (ms): 
+        <span data-testid="test-user-time" id="currentTime"></span>
+      </p>
+
+      <!-- Social Links -->
+      <nav aria-label="Social Links">
+        <ul class="social-links" data-testid="test-user-social-links">
+          <li><a href="https://twitter.com/busaryoh" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+          <li><a href="https://github.com/hokage-learn" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a></li>
+          <li><a href="https://linkedin.com/busayo-ogunde-b606a812a" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hobbies -->
+      <section aria-labelledby="hobbies-title">
+        <h3 id="hobbies-title">Hobbies</h3>
+        <ul data-testid="test-user-hobbies">
+          <li>Cycling</li>
+          <li>Photography</li>
+          <li>Cooking</li>
+        </ul>
+      </section>
+
+      <!-- Dislikes -->
+      <section aria-labelledby="dislikes-title">
+        <h3 id="dislikes-title">Dislikes</h3>
+        <ul data-testid="test-user-dislikes">
+          <li>Procrastination</li>
+          <li>Cluttered UI</li>
+          <li>Slow websites</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <script src="./main.js"></script>
+</body>
+</html>
