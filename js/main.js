@@ -1,3 +1,12 @@
+const toggleButton = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+
+    toggleButton.addEventListener('click', () => {
+      const expanded = toggleButton.getAttribute('aria-expanded') === 'true';
+      toggleButton.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('active');
+    });
+
 function updateCurrentTime() {
   const timeElement = document.getElementById("currentTime");
   if (timeElement) {

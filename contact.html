@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- ✅ Sticky & Toggleable Navbar -->
+  <header class="navbar-header">
+    <nav aria-label="Main Navigation" class="navbar">
+      <div class="nav-container">
+        <a href="./index.html" class="nav-logo" data-testid="nav-logo">Busayo</a>
+        <button
+          class="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="./index.html" data-testid="nav-home">Home</a></li>
+          <li><a href="./about.html" data-testid="nav-about">About</a></li>
+          <li><a href="./contact.html" data-testid="nav-contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ✅ Main Content -->
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contactForm" novalidate aria-label="Contact Form">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="contactName">Full Name</label>
+        <input
+          type="text"
+          id="contactName"
+          name="name"
+          data-testid="test-contact-name"
+          required
+          aria-describedby="error-name"
+        />
+        <p id="error-name" class="error" data-testid="test-contact-error-name" aria-live="polite"></p>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="contactEmail">Email</label>
+        <input
+          type="email"
+          id="contactEmail"
+          name="email"
+          data-testid="test-contact-email"
+          required
+          aria-describedby="error-email"
+        />
+        <p id="error-email" class="error" data-testid="test-contact-error-email" aria-live="polite"></p>
+      </div>
+
+      <!-- Subject -->
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input
+          type="text"
+          id="contactSubject"
+          name="subject"
+          data-testid="test-contact-subject"
+          required
+          aria-describedby="error-subject"
+        />
+        <p id="error-subject" class="error" data-testid="test-contact-error-subject" aria-live="polite"></p>
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label for="contactMessage">Message</label>
+        <textarea
+          id="contactMessage"
+          name="message"
+          rows="5"
+          data-testid="test-contact-message"
+          required
+          aria-describedby="error-message"
+        ></textarea>
+        <p id="error-message" class="error" data-testid="test-contact-error-message" aria-live="polite"></p>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" data-testid="test-contact-submit">Submit</button>
+    </form>
+
+    <!-- Success Message -->
+    <p id="contactSuccess" class="success" data-testid="test-contact-success" hidden>
+      ✅ Thank you for your message! We’ll get back to you soon.
+    </p>
+  </main>
+
+  <!-- ✅ Scripts -->
+  <script src="./js/main.js"></script>
+  <script src="./js/contact.js"></script>
+</body>
+</html>
